@@ -17,13 +17,30 @@ body {
   font-size: medium;
 }
 
+.menu {
+  display: flex;
+  background-color: darkgray;
+}
+
+
 .menu-item {
-  display: flow-root;
   padding:10px;
   font-size: large;
+  color: black;
 }
 
 .menu-item:hover {
-  text-decoration: underline;
-  color:blue;
+  cursor: pointer;
+}
+
+.menu-item:nth-child(odd):hover {
+  transform: scale(1.2) rotate(4deg);
+}
+
+.menu-item:nth-child(even):hover {
+  transform: scale(1.2) rotate(-4deg);
+}
+
+.day {
+  display: block;
 }

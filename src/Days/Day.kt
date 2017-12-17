@@ -4,6 +4,7 @@ import react.RBuilder
 import react.RComponent
 import react.RProps
 import react.RState
+import react.dom.div
 import react.dom.h1
 import react.dom.p
 
@@ -21,9 +22,11 @@ open class Day: RComponent<RProps, DayState>() {
     }
 
     override fun RBuilder.render() {
-        h1{+state.name }
-        p{+"P1: ${state.p1Res}"}
-        p{+"P2: ${state.p2Res}"}
+        div("day") {
+            h1 { +state.name }
+            p { +"P1: ${state.p1Res}" }
+            p { +"P2: ${state.p2Res}" }
+        }
     }
 }
 

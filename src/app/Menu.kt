@@ -25,12 +25,12 @@ class Menu : RComponent<RProps, MenuState>() {
     )
 
     override fun RBuilder.render() {
-        div {
+        div("menu") {
             days.map { day ->
                 div("menu-item") { +day.name; attrs.onClickFunction = { setState{activeDay = day} }}
             }
-            state.activeDay.el(this)
         }
+        state.activeDay.el(this)
     }
 
 }

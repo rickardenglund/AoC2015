@@ -8,9 +8,6 @@ class App : RComponent<RProps, RState>() {
     override fun RBuilder.render() {
         div("App-header") {
             logo()
-            h2 {
-                +"Welcome to React with Kotlin"
-            }
         }
         menu()
     }
